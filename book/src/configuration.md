@@ -138,6 +138,8 @@ auto-pairs = false # defaults to `true`
 The default pairs are <code>(){}[]''""``</code>, but these can be customized by
 setting `auto-pairs` to a TOML table:
 
+Example
+
 ```toml
 [editor.auto-pairs]
 '(' = ')'
@@ -203,6 +205,7 @@ tab = "→"
 newline = "⏎"
 ```
 
+<<<<<<< HEAD
 ### `[editor.indent-guides]` Section
 
 Options for rendering vertical indent guides.
@@ -219,3 +222,11 @@ Example:
 render = true
 character = "╎"
 ```
+### `[editor.explorer]` Section
+Sets explorer side width and style.
+
+ | Key            | Description                                                                              | Default |
+ | ---            | -----------                                                                              | ------- |
+ | `column-width` | explorer side width                                                                      | 30      |
+ | `style`        | explorer item style, tree or list                                                        | tree    |
+ | `position`     | explorer widget position, embed or overlay                                               | overlay |

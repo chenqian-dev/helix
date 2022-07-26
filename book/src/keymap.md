@@ -254,6 +254,8 @@ This layer is a kludge of mappings, mostly pickers.
 | `R`     | Replace selections by clipboard contents                                | `replace_selections_with_clipboard` |
 | `/`     | Global search in workspace folder                                       | `global_search`                     |
 | `?`     | Open command palette                                                    | `command_palette`                   |
+| `e`     | Open or focus explorer                                                  | `toggle_or_focus_explorer`          |
+| `E`     | open explorer recursion                                                 | `open_explorer_recursion`           |
 
 > TIP: Global search displays results in a fuzzy picker, use `space + '` to bring it back up after opening a file.
 
@@ -359,25 +361,57 @@ Keys to use within picker. Remapping currently not supported.
 
 Keys to use within prompt, Remapping currently not supported.
 
-| Key                                         | Description                                                             |
-| -----                                       | -------------                                                           |
-| `Escape`, `Ctrl-c`                          | Close prompt                                                            |
-| `Alt-b`, `Ctrl-Left`                        | Backward a word                                                         |
-| `Ctrl-b`, `Left`                            | Backward a char                                                         |
-| `Alt-f`, `Ctrl-Right`                       | Forward a word                                                          |
-| `Ctrl-f`, `Right`                           | Forward a char                                                          |
-| `Ctrl-e`, `End`                             | Move prompt end                                                         |
-| `Ctrl-a`, `Home`                            | Move prompt start                                                       |
-| `Ctrl-w`, `Alt-Backspace`, `Ctrl-Backspace` | Delete previous word                                                    |
-| `Alt-d`, `Alt-Delete`, `Ctrl-Delete`        | Delete next word                                                        |
-| `Ctrl-u`                                    | Delete to start of line                                                 |
-| `Ctrl-k`                                    | Delete to end of line                                                   |
-| `backspace`, `Ctrl-h`                       | Delete previous char                                                    |
-| `delete`, `Ctrl-d`                          | Delete next char                                                        |
-| `Ctrl-s`                                    | Insert a word under doc cursor, may be changed to Ctrl-r Ctrl-w later   |
-| `Ctrl-p`, `Up`                              | Select previous history                                                 |
-| `Ctrl-n`, `Down`                            | Select next history                                                     |
-| `Ctrl-r`                                    | Insert the content of the register selected by following input char     |
-| `Tab`                                       | Select next completion item                                             |
-| `BackTab`                                   | Select previous completion item                                         |
-| `Enter`                                     | Open selected                                                           |
+| Key                     | Description                                                             |
+| -----                   | -------------                                                           |
+| `Escape`, `Ctrl-c`      | Close prompt                                                            |
+| `Alt-b`, `Alt-Left`     | Backward a word                                                         |
+| `Ctrl-b`, `Left`        | Backward a char                                                         |
+| `Alt-f`, `Alt-Right`    | Forward a word                                                          |
+| `Ctrl-f`, `Right`       | Forward a char                                                          |
+| `Ctrl-e`, `End`         | Move prompt end                                                         |
+| `Ctrl-a`, `Home`        | Move prompt start                                                       |
+| `Ctrl-w`                | Delete previous word                                                    |
+| `Alt-d`                 | Delete next word                                                        |
+| `Ctrl-u`                | Delete to start of line                                                 |
+| `Ctrl-k`                | Delete to end of line                                                   |
+| `backspace`, `Ctrl-h`   | Delete previous char                                                    |
+| `delete`, `Ctrl-d`      | Delete next char                                                        |
+| `Ctrl-s`                | Insert a word under doc cursor, may be changed to Ctrl-r Ctrl-w later   |
+| `Ctrl-p`, `Up`          | Select previous history                                                 |
+| `Ctrl-n`, `Down`        | Select next history                                                     |
+| `Ctrl-r`                | Insert the content of the register selected by following input char     |
+| `Tab`                   | Select next completion item                                             |
+| `BackTab`               | Select previous completion item                                         |
+| `Enter`                 | Open selected                                                           |
+
+# File explorer
+Keys to use within explorer, Remapping currently not supported.
+
+| Key                      | Description                                                            |
+| -----                    | -------------                                                          |
+| `Escape`                 | Back to editor                                                         |
+|  `Ctrl-c`                | Close explorer                                                         |
+|  `Enter`                 | Open file or toggle dir selected                                       |
+| `b`                      | Back to current root's parent                                          |
+| `f`                      | Filter items                                                           |
+| `z`                      | Fold currrent level                                                    |
+| `k`, `Shift-Tab`, `Up`   | select previous item                                                   |
+| `j`, `Tab`, `Down`       | select next item                                                       |
+| `h`                      | Scroll left                                                            |
+| `l`                      | Scroll right                                                           |
+| `G`                      | Move to last item                                                      |
+| `Ctrl-d`                 | Move down half page                                                    |
+| `Ctrl-u`                 | Move up half page                                                      |
+| `Shift-d`                | Move down a page                                                       |
+| `Shift-u`                | Move up a page                                                         |
+| `/`                      | Search item                                                            |
+| `?`                      | Search item reverse                                                    |
+| `n`                      | Repeat last search                                                     |
+| `Shift-n`                | Repeat last search reverse                                             |
+| `gg`                     | Move to first item                                                     |
+| `ge`                     | Move to last item                                                      |
+| `gc`                     | Make current dir as root dir                                           |
+| `mf`                     | Create new file under current item's parent                            |
+| `md`                     | Create new dir  under current item's parent                            |
+| `rf`                     | Remove file selected                                                   |
+| `rd`                     | Remove dir selected                                                    |
